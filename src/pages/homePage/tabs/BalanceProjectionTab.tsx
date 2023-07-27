@@ -17,15 +17,14 @@ const BalanceProjectionTab = () => {
   const account = data && data.getAccount.success ? data.getAccount.data : null;
   const accountBalance = account ? account.balance / 100 : 0;
 
-  const calculateSavings = () => (!isNaN(income) && !isNaN(expenses)) ? income - expenses : 0;
-  const projectedCashFlow = accountBalance + calculateSavings();
+  const calculateProjectedBalance = () => accountBalance + (!isNaN(income) ? income : 0) - (!isNaN(expenses) ? expenses : 0);
+  const projectedCashFlow = calculateProjectedBalance();
 
   const chartData = [
     {
       name: 'Projections',
       Income: income || 0,
       Expenses: expenses || 0,
-      Savings: calculateSavings(),
       'Projected Cash Flow': projectedCashFlow,
     },
   ];
