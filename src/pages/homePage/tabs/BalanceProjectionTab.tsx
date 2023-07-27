@@ -1,7 +1,6 @@
 import React from "react";
-import styled from "styled-components";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import { CURRENCY_TICKERS, CurrencyTickersType } from "utils/constants";
+import { CURRENCY_TICKERS } from "utils/constants";
 import useGetAccountQuery from "graphql/generated/queries/getAccountQuery";
 import { bankersRound } from "utils/formatNumber";
 import Spacer from "components/position/Spacer";
