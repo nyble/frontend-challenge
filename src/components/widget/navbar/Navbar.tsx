@@ -19,10 +19,10 @@ const Navbar = ({}: NavbarPropsType) => {
     <NavbarWrapper>
       <NavbarInnerWrapper>
         <NavbarLogoWrapper src={Logo} />
-        
+
         <NavbarProfilePill>
           <NavbarProfileWrapper src={Doggy} />
-          <SmallHeading textAlign='flex-start'>
+          <SmallHeading textAlign='flex-start' style={{ fontWeight: 'bold' }}>
             Billy
           </SmallHeading>
         </NavbarProfilePill>
